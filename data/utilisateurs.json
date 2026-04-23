@@ -1,1 +1,66 @@
-[]
+[
+    {
+        "identifiant": "eureka",
+        "mot_de_passe": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi",
+        "role": "Super Administrateur",
+        "nom_complet": "Eureka Chef",
+        "date_creation": "2026-04-22",
+        "actif": true
+    },
+    {
+        "identifiant": "yannis",
+        "mot_de_passe": "$2y$10$lL5QU7r8SatiZ.9HxpbpQ.gpOEAj7EUN.H.EySLU5wUtIZDguWmUe",
+        "role": "Manager",
+        "nom_complet": "lubamba",
+        "date_creation": "2026-04-22",
+        "actif": true
+    },
+    {
+        "identifiant": "dan",
+        "mot_de_passe": "$2y$10$hFlveG2RNJ2W6KeknVmek.ZHGgIcls0YBx0zoyW\/egfEO30YWsN4.",
+        "role": "Manager",
+        "nom_complet": "dan bushiri",
+        "date_creation": "2026-04-22",
+        "actif": true
+    },
+    {
+        "identifiant": "madidi",
+        "mot_de_passe": "$2y$10$vIEVBOWm4XXX3UOC\/i0MfeGIEd.eLuK7Ay3qQEfGImC7qk\/GF6rn2",
+        "role": "Caissier",
+        "nom_complet": "madidi imunga",
+        "date_creation": "2026-04-22",
+        "actif": true
+    },
+    {
+        "identifiant": "joseph",
+        "mot_de_passe": "$2y$10$sGRojFd2kPVD\/dnzJTxizux.lk9Zrn8rbGp7m7qf79c5taPzSUmUa",
+        "role": "Manager",
+        "nom_complet": "mahenzi",
+        "date_creation": "2026-04-22",
+        "actif": true
+    },
+    {
+        "identifiant": "turle",
+        "mot_de_passe": "$2y$10$s9t7D8bQ4NgFD5zVxIrRIeukeNC12\/iAQwpmx\/nXr1pZqqtwSGNG6",
+        "role": "Caissier",
+        "nom_complet": "turture",
+        "date_creation": "2026-04-22",
+        "actif": true
+    },
+    {
+        "identifiant": "tuto",
+        "mot_de_passe": "$2y$10$Cz5Nav0B8gUhvcG.u85kU.0PYG5.LnXyZsVeKhWL5NfZIf8AWnsU6",
+        "role": "Caissier",
+        "nom_complet": "dzaefr",
+        "date_creation": "2026-04-22",
+        "actif": true
+    },
+    {
+        "identifiant": "gaga",
+        "mot_de_passe": "$2y$10$9W\/aTfyc1X.7wAjTMgcHCOvqyc7cxCXZ7TpsObYGrHwN1gHKYmOWy",
+        "role": "Caissier",
+        "nom_complet": "mazala",
+        "date_creation": "2026-04-22",
+        "actif": true
+    }
+]

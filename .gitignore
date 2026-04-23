@@ -17,3 +17,5 @@ config/config.local.php
 *.tmp
 *.swp
 
+# Données locales 
+data/*.json

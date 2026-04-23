@@ -1,1 +1,26 @@
-[]
+[
+    {
+        "code_barre": "38007900865657",
+        "nom": "swissta",
+        "prix_unitaire_ht": 550,
+        "date_expiration": "2030-08-16",
+        "quantite_stock": 33,
+        "date_enregistrement": "2026-04-22"
+    },
+    {
+        "code_barre": "123346917z9hsjs95",
+        "nom": "banane",
+        "prix_unitaire_ht": 1000,
+        "date_expiration": "2026-05-05",
+        "quantite_stock": 2,
+        "date_enregistrement": "2026-04-22"
+    },
+    {
+        "code_barre": "03116519747002",
+        "nom": "yaourt",
+        "prix_unitaire_ht": 2500,
+        "date_expiration": "2029-12-09",
+        "quantite_stock": 207,
+        "date_enregistrement": "2026-04-23"
+    }
+]
