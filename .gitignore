@@ -18,4 +18,3 @@ config/config.local.php
 *.swp
 
 # Données locales 
-data/*.json
