@@ -112,7 +112,7 @@ include 'includes/header.php';
                         <td><?= htmlspecialchars($f['id_facture']) ?></td>
                         <td><?= htmlspecialchars($f['heure']) ?></td>
                         <td><?= number_format($f['total_ttc'], 2) ?> CDF</td>
-                        <td><a href="<?= BASE_URL ?>/modules/facturation/facture_detail.php?id=<?= urlencode($f['id_facture']) ?>" class="btn-view">Voir</a></td>
+                        <td><a href="<?= BASE_URL ?>/modules/facturation/afficher-facture.php?id=<?= urlencode($f['id_facture']) ?>" class="btn-view">Voir</a></td>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>
