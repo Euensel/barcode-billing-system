@@ -1,0 +1,1419 @@
+/* ========== TYPOGRAPHIE & BASE ========== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap');
+
+:root {
+  --primary: #1E6F9F;
+  --primary-dark: #155a82;
+  --secondary: #2E7D64;
+  --secondary-dark: #236353;
+  --danger: #E25C5C;
+  --danger-dark: #c54545;
+  --gray-bg: #F7F9FC;
+  --white: #FFFFFF;
+  --text-dark: #2C3E50;
+  --text-muted: #7F8C8D;
+  --border: #E2E8F0;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.05);
+  --radius: 12px;
+   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+  --transition: all 0.2s ease;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+/* ==========================================================================
+   Page de connexion (login.php)
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--gray-bg);
+  color: var(--text-dark);
+  line-height: 1.5;
+  min-height: 100vh;
+  
+}
+.body-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ========== PAGE CONNEXION ========== */
+.login-container {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md), 0 10px 25px -5px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 440px;
+  padding: 2rem 1.8rem;
+  transition: var(--transition);
+}
+
+.login-container h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.3px;
+}
+
+.error-message {
+  background: #fee2e2;
+  color: var(--danger-dark);
+  border-left: 4px solid var(--danger);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.error-message {
+  background: #fee2e2;
+  color: var(--danger-dark);
+  border-left: 4px solid var(--danger);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.error-message i {
+  font-size: 1.2rem;
+  color: var(--danger-dark);
+}
+
+.login-form .form-group {
+  margin-bottom: 1.2rem;
+}
+
+.login-form label {
+  display: block;
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-bottom: 0.4rem;
+  color: var(--text-dark);
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  transition: var(--transition);
+  font-family: var(--font-sans);
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(30,111,159,0.15);
+}
+
+.btn-login {
+  width: 100%;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 0.5rem;
+  font-family: var(--font-sans);
+}
+
+.btn-login:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.input-icon {
+  position: relative;
+}
+.input-icon i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+.input-icon input {
+  padding-left: 2.4rem;
+}
+/* ==========================================================================
+   Header (header.php)
+   ========================================================================== */
+
+.main-header {
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0.75rem 0;
+}
+
+.container-header {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo a {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo a i {
+    font-size: 1.6rem;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.2rem;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: var(--transition);
+}
+
+.main-nav a i {
+    font-size: 1.2rem;
+}
+
+.main-nav a:hover {
+    color: var(--primary);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--gray-bg);
+    padding: 0.3rem 0.8rem;
+    border-radius: 40px;
+}
+
+.user-info i {
+    font-size: 1.2rem;
+    color: var(--primary);
+}
+
+.user-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.logout-link {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--danger);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.logout-link:hover {
+    color: var(--danger-dark);
+}
+
+.main-content {
+    padding-top: 80px;
+    min-height: calc(100vh - 60px);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.main-footer {
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+/* ==========================================================================
+   Tableau de bord (index.php)
+   ========================================================================== */
+.main-content {
+    padding-top: 80px;  /* Ajuste selon la hauteur de ton header */
+    min-height: calc(100vh - 60px);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.dashboard-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.dashboard-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.dashboard-card i {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+}
+
+.dashboard-card h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-card .number, 
+.number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0.5rem 0;
+}
+.welcome-text{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.dashboard-card a {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.dashboard-card a:hover {
+    text-decoration: underline;
+}
+/* Dashboard amélioré */
+.dashboard-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.dashboard-header {
+    margin-bottom: 2rem;
+}
+
+.welcome-text {
+    color: var(--text-muted);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.dashboard-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1.2rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.card-icon {
+    background: var(--gray-bg);
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card-content h3 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.card-content .number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    line-height: 1.2;
+}
+
+.card-content .sub {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: 0.2rem 0 0.5rem;
+}
+
+.card-link {
+    font-size: 0.8rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+.recent-invoices {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin-top: 1rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.recent-invoices h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.alert-warning {
+    background: #fff3cd;
+    color: #856404;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-sm);
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.alert-warning a {
+    color: #856404;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dashboard-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .card-icon {
+        margin-bottom: 0.5rem;
+    }
+}
+/* ==========================================================================
+   Gestion des comptes (Super Admin)
+   ========================================================================== */
+/* ========== PAGE GESTION COMPTES ========== */
+.subtitle {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.action-bar {
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+/* Tableau responsive */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    background: var(--white);
+    border-radius: var(--radius);
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.data-table th,
+.data-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.data-table th {
+    background: var(--gray-bg);
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.data-table tr:hover {
+    background: var(--gray-bg);
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.btn-icon:hover {
+    background: var(--gray-bg);
+    color: var(--primary);
+}
+
+.btn-icon.danger:hover {
+    color: var(--danger);
+}
+
+/* Alertes */
+.alert {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-sm);
+    margin-bottom: 1rem;
+}
+
+
+.alert i {
+    font-size: 1.2rem;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.alert a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    
+   
+}
+/* ==========================================================================
+   Page modifier-compte.php
+   ========================================================================== */
+
+/* Formulaire de modification : plus étroit et centré */
+.modify-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--bg-tertiary);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.modify-form .form-group {
+    margin-bottom: 1.2rem;
+}
+
+.modify-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    color: var(--text-dark);
+}
+
+.modify-form input,
+.modify-form select {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    background-color: var(--bg-main);
+}
+
+.modify-form button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    background: var(--primary);
+    color: white;
+
+}
+
+.modify-form button:hover {
+    background: var(--primary-dark);
+}
+/* ==========================================================================
+   Page ajouter-compte.php
+   ========================================================================== */
+
+/* Conteneur du formulaire d'ajout */
+.admin-container .admin-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--bg-tertiary);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.admin-container .admin-form .form-group {
+    width: 100%;
+}
+
+.admin-container .admin-form label {
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    display: block;
+    color: var(--text-dark);
+}
+
+.admin-container .admin-form input,
+.admin-container .admin-form select {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    background-color: var(--bg-main);
+    font-size: 1rem;
+}
+
+.admin-container .admin-form input:focus,
+.admin-container .admin-form select:focus {
+    outline: none;
+    border-color: var(--burgundy-red);
+    box-shadow: 0 0 0 2px rgba(110, 46, 42, 0.2);
+}
+
+.admin-container .btn-submit {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+/* ========== PAGE PRODUITS ========== */
+/* ========== PAGE ENREGISTREMENT PRODUIT ========== */
+.scanner-area {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--gray-bg);
+    border-radius: var(--radius);
+}
+
+.btn-scan {
+    background: var(--secondary);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.btn-scan:hover {
+    background: var(--secondary-dark);
+}
+
+#scanner-video {
+    margin-top: 1rem;
+    max-width: 100%;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+}
+
+.scanner-result {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+.scanner-area {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--gray-bg);
+    border-radius: var(--radius);
+    position: relative; /* Pour un éventuel overlay */
+}
+
+/* Styles spécifiques pour l'élément vidéo */
+#scanner-video {
+    display: none; /* Caché par défaut, sera montré par JS */
+    width: 100%;
+    max-width: 500px; /* Vous pouvez ajuster la largeur max */
+    margin: 1rem auto 0 auto;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    /* CORRECTION DE L'INVERSION (Miroir) */
+    transform: scaleX(-1);
+    /* CENTRAGE DU CONTENU VIDÉO */
+    object-fit: cover;
+    aspect-ratio: 4 / 3; /* Maintient un ratio cohérent */
+    background-color: #000; /* Couleur de fond si la vidéo ne remplit pas tout */
+}
+
+.scanner-result {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.product-form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.product-form-wrapper h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.product-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.product-form label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.product-form input {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.product-form input:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(30,111,159,0.1);
+}
+
+.product-form input:read-only {
+    background-color: var(--gray-bg);
+    cursor: not-allowed;
+}
+
+.btn-submit {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+    width: auto;
+    min-width: 180px;
+}
+
+.btn-submit:hover {
+    background: var(--primary-dark);
+}
+
+.info-existing {
+    background: var(--gray-bg);
+    padding: 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-existing a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.info-existing a:hover {
+    text-decoration: underline;
+}
+
+/* ========== LISTE DES PRODUITS ========== */
+.btn-add {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--secondary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    margin-bottom: 1.5rem;
+}
+
+.btn-add:hover {
+    background: var(--secondary-dark);
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.data-table th {
+    background: var(--gray-bg);
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.data-table tr:hover {
+    background: var(--gray-bg);
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+.btn-edit, .btn-delete {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.btn-edit {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.btn-edit:hover {
+    background: #bae6fd;
+}
+
+.btn-delete {
+    background: #fee2e2;
+    color: var(--danger-dark);
+}
+
+.btn-delete:hover {
+    background: #fecaca;
+}
+
+.alert-info {
+    background: #e0f2fe;
+    color: #0369a1;
+    border: 1px solid #bae6fd;
+}
+
+
+.cart-container {
+    margin-top: 2rem;
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1rem;
+    box-shadow: var(--shadow-sm);
+}
+.cart-container h2 {
+    margin-bottom: 1rem;
+}
+
+/* ========== PAGE DÉTAIL FACTURE ========== */
+/* ========== PAGE DÉTAIL FACTURE ========== */
+
+/* Bouton retour */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+    margin-top: 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-back:hover {
+    background-color: var(--secondary-dark);
+    transform: translateY(-1px);
+}
+
+/* Style du pied de tableau (totaux) */
+.data-table tfoot {
+    background-color: var(--gray-bg);
+    font-weight: 600;
+    border-top: 2px solid var(--border);
+}
+
+.data-table tfoot th,
+.data-table tfoot td {
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+}
+
+/* Mise en valeur du total TTC */
+.data-table tfoot tr:last-child th,
+.data-table tfoot tr:last-child td {
+    background-color: rgba(46, 125, 100, 0.1);
+    color: var(--secondary-dark);
+    font-size: 1rem;
+}
+
+/* Amélioration de la mise en page de l'en-tête de facture */
+.facture-header {
+    background: var(--gray-bg);
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--primary);
+}
+
+.facture-header p {
+    margin: 0.25rem 0;
+}
+
+.facture-header strong {
+    color: var(--primary);
+}
+
+/* ========== PAGE MES FACTURES ========== */
+
+/* En-tête avec compteur */
+.factures-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.factures-header h1 {
+    margin: 0;
+}
+
+.factures-count {
+    background: var(--gray-bg);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 1.25rem;
+    color: var(--text-muted);
+}
+
+.factures-count span {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* Tableau amélioré */
+.data-table {
+    width: 100%;
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    padding: 0.9rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.data-table th {
+    background: var(--gray-bg);
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.data-table tr:hover {
+    background: var(--gray-bg);
+}
+
+/* Lien "Voir" */
+.btn-view {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: transparent;
+    color: var(--primary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: var(--transition);
+    border: 1px solid var(--border);
+}
+
+.btn-view:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* Message si aucune facture */
+.alert-info {
+    background: var(--gray-bg);
+    color: var(--text-muted);
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: var(--radius);
+    border-left: 4px solid var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .factures-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+    .data-table th,
+    .data-table td {
+        padding: 0.6rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* ========== PAGE NOUVELLE FACTURE ========== */
+
+/* Zone de scan */
+.scanner-area {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--gray-bg);
+    border-radius: var(--radius);
+}
+
+.btn-scan {
+    background: var(--secondary);
+    color: var(--white);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+.btn-scan:hover {
+    background: var(--secondary-dark);
+}
+
+#scanner-video {
+    margin-top: 1rem;
+    max-width: 100%;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+}
+
+.scanner-result {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Formulaire d'ajout d'article */
+.product-form-wrapper {
+    max-width: 500px;
+    margin: 0 auto 2rem auto;
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.product-form .form-group {
+    margin-bottom: 1rem;
+}
+.product-form label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+.product-form input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+}
+.product-form input:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+.btn-submit {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+.btn-submit:hover {
+    background: var(--primary-dark);
+}
+
+/* Panier */
+.cart-container {
+    margin-top: 2rem;
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1rem;
+    box-shadow: var(--shadow-sm);
+}
+.cart-container h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Bouton vider le panier (trash) */
+.btn-clear {
+    background: var(--danger);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+.btn-clear:hover {
+    background: var(--danger-dark);
+}
+
+/* Groupe de boutons dans le panier */
+.cart-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* ========== PAGE RAPPORT JOURNALIER ========== */
+
+/* Barre de filtre */
+.filter-bar {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.filter-form {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-form .form-group {
+    margin-bottom: 0;
+}
+
+.filter-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.filter-form input {
+    padding: 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+}
+
+.filter-form .btn-submit {
+    background: var(--primary);
+    padding: 0.5rem 1rem;
+}
+
+/* Cartes de statistiques */
+.stats-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stats-cards .stat-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.stats-cards .stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.stats-cards .stat-card i {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.stats-cards .stat-card h3 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.stats-cards .stat-card .number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+/* Liste des factures */
+.invoices-list h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+/* ========== RAPPORT MENSUEL ========== */
+.chart-container {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+.chart-container h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+.bar-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.bar-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.bar-label {
+    width: 60px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+.bar-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.bar {
+    height: 24px;
+    background-color: var(--primary);
+    border-radius: var(--radius-sm);
+    transition: width 0.3s ease;
+    min-width: 4px;
+}
+.bar-value {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+.top-products {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+.top-products h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Liens de navigation entre rapports */
+.navigation-links {
+    padding-bottom:3rem;
+    padding-top: 3rem;
+}
+.btn-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--secondary);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+.btn-link:hover {
+    background: var(--secondary-dark);
+}
