@@ -1,0 +1,221 @@
+[
+    {
+        "id_facture": "FAC-20260422-001",
+        "date": "2026-04-22",
+        "heure": "22:49:12",
+        "caissier": "eureka",
+        "articles": [
+            {
+                "code_barre": "38007900865657",
+                "nom": "swissta",
+                "prix_unitaire_ht": 550,
+                "quantite": 1,
+                "sous_total_ht": 550
+            }
+        ],
+        "total_ht": 550,
+        "tva": 99,
+        "total_ttc": 649
+    },
+    {
+        "id_facture": "FAC-20260422-002",
+        "date": "2026-04-22",
+        "heure": "22:57:10",
+        "caissier": "eureka",
+        "articles": [
+            {
+                "code_barre": "38007900865657",
+                "nom": "swissta",
+                "prix_unitaire_ht": 550,
+                "quantite": 5,
+                "sous_total_ht": 2750
+            }
+        ],
+        "total_ht": 2750,
+        "tva": 495,
+        "total_ttc": 3245
+    },
+    {
+        "id_facture": "FAC-20260422-003",
+        "date": "2026-04-22",
+        "heure": "23:48:26",
+        "caissier": "eureka",
+        "articles": [
+            {
+                "code_barre": "123346917z9hsjs95",
+                "nom": "banane",
+                "prix_unitaire_ht": 1000,
+                "quantite": 1,
+                "sous_total_ht": 1000
+            }
+        ],
+        "total_ht": 1000,
+        "tva": 180,
+        "total_ttc": 1180
+    },
+    {
+        "id_facture": "FAC-20260422-004",
+        "date": "2026-04-22",
+        "heure": "23:48:55",
+        "caissier": "gaga",
+        "articles": [
+            {
+                "code_barre": "123346917z9hsjs95",
+                "nom": "banane",
+                "prix_unitaire_ht": 1000,
+                "quantite": 10,
+                "sous_total_ht": 10000
+            }
+        ],
+        "total_ht": 10000,
+        "tva": 1800,
+        "total_ttc": 11800
+    },
+    {
+        "id_facture": "FAC-20260423-001",
+        "date": "2026-04-23",
+        "heure": "00:02:38",
+        "caissier": "madidi",
+        "articles": [
+            {
+                "code_barre": "123346917z9hsjs95",
+                "nom": "banane",
+                "prix_unitaire_ht": 1000,
+                "quantite": 4,
+                "sous_total_ht": 4000
+            }
+        ],
+        "total_ht": 4000,
+        "tva": 720,
+        "total_ttc": 4720
+    },
+    {
+        "id_facture": "FAC-20260423-002",
+        "date": "2026-04-23",
+        "heure": "11:40:14",
+        "caissier": "eureka",
+        "articles": [
+            {
+                "code_barre": "123346917z9hsjs95",
+                "nom": "banane",
+                "prix_unitaire_ht": 1000,
+                "quantite": 1,
+                "sous_total_ht": 1000
+            },
+            {
+                "code_barre": "38007900865657",
+                "nom": "swissta",
+                "prix_unitaire_ht": 550,
+                "quantite": 5,
+                "sous_total_ht": 2750
+            },
+            {
+                "code_barre": "03116519747002",
+                "nom": "yaourt",
+                "prix_unitaire_ht": 2500,
+                "quantite": 1,
+                "sous_total_ht": 2500
+            },
+            {
+                "code_barre": "03116519747002",
+                "nom": "yaourt",
+                "prix_unitaire_ht": 2500,
+                "quantite": 1,
+                "sous_total_ht": 2500
+            }
+        ],
+        "total_ht": 8750,
+        "tva": 1575,
+        "total_ttc": 10325
+    },
+    {
+        "id_facture": "FAC-20260423-003",
+        "date": "2026-04-23",
+        "heure": "11:42:40",
+        "caissier": "eureka",
+        "articles": [
+            {
+                "code_barre": "38007900865657",
+                "nom": "swissta",
+                "prix_unitaire_ht": 550,
+                "quantite": 40,
+                "sous_total_ht": 22000
+            }
+        ],
+        "total_ht": 22000,
+        "tva": 3960,
+        "total_ttc": 25960
+    },
+    {
+        "id_facture": "FAC-20260423-004",
+        "date": "2026-04-23",
+        "heure": "15:16:54",
+        "caissier": "eureka",
+        "articles": [
+            {
+                "code_barre": "38007900865657",
+                "nom": "swissta",
+                "prix_unitaire_ht": 550,
+                "quantite": 5,
+                "sous_total_ht": 2750
+            }
+        ],
+        "total_ht": 2750,
+        "tva": 495,
+        "total_ttc": 3245
+    },
+    {
+        "id_facture": "FAC-20260425-001",
+        "date": "2026-04-25",
+        "heure": "19:40:11",
+        "caissier": "eureka",
+        "articles": [
+            {
+                "code_barre": "38007900865657",
+                "nom": "swissta",
+                "prix_unitaire_ht": 550,
+                "quantite": 1,
+                "sous_total_ht": 550
+            }
+        ],
+        "total_ht": 550,
+        "tva": 99,
+        "total_ttc": 649
+    },
+    {
+        "id_facture": "FAC-20260427-001",
+        "date": "2026-04-27",
+        "heure": "20:00:44",
+        "caissier": "gaga",
+        "articles": [
+            {
+                "code_barre": "6106000000942",
+                "nom": "Vitalo",
+                "prix_unitaire_ht": 1500,
+                "quantite": 1,
+                "sous_total_ht": 1500
+            }
+        ],
+        "total_ht": 1500,
+        "tva": 270,
+        "total_ttc": 1770
+    },
+    {
+        "id_facture": "FAC-20260427-002",
+        "date": "2026-04-27",
+        "heure": "20:07:06",
+        "caissier": "gaga",
+        "articles": [
+            {
+                "code_barre": "6009804011537",
+                "nom": "Eau potable",
+                "prix_unitaire_ht": 700,
+                "quantite": 7,
+                "sous_total_ht": 4900
+            }
+        ],
+        "total_ht": 4900,
+        "tva": 882,
+        "total_ttc": 5782
+    }
+]

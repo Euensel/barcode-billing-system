@@ -16,6 +16,3 @@ config/config.local.php
 # Fichiers temporaires
 *.tmp
 *.swp
-
-# Données locales 
-data/*.json
