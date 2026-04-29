@@ -2,10 +2,7 @@
 // includes/fonctions_produits.php
 require_once __DIR__ . '/../config/config.php';
 
-/**
- * Lit tous les produits depuis le fichier JSON
- * @return array Tableau des produits (vide si fichier inexistant ou invalide)
- */
+// Lit tous les produits depuis le fichier JSON
 function lireProduits() {
     if (!file_exists(PRODUCTS_FILE)) {
         return [];
@@ -18,11 +15,7 @@ function lireProduits() {
     return (json_last_error() === JSON_ERROR_NONE && is_array($data)) ? $data : [];
 }
 
-/**
- * Écrit la liste des produits dans le fichier JSON
- * @param array $produits
- * @return bool
- */
+// Écrit la liste des produits dans le fichier JSON
 function ecrireProduits($produits) {
     $dir = dirname(PRODUCTS_FILE);
     if (!is_dir($dir)) {
@@ -32,11 +25,7 @@ function ecrireProduits($produits) {
     return file_put_contents(PRODUCTS_FILE, $json) !== false;
 }
 
-/**
- * Trouve un produit par son code-barres
- * @param string $codeBarre
- * @return array|null
- */
+// Trouve un produit par son code-barres
 function trouverProduitParCodeBarre($codeBarre) {
     $produits = lireProduits();
     foreach ($produits as $p) {
@@ -47,20 +36,17 @@ function trouverProduitParCodeBarre($codeBarre) {
     return null;
 }
 
-/**
- * Ajoute un nouveau produit
- * @param array $produit
- * @return bool
- */
+// Ajoute un nouveau produit après vérification de l'unicité du code-barres
 function ajouterProduit($produit) {
     $produits = lireProduits();
-    // Vérifier que le code-barres n'existe pas déjà
     if (trouverProduitParCodeBarre($produit['code_barre']) !== null) {
         return false;
     }
     $produits[] = $produit;
     return ecrireProduits($produits);
 }
+
+// Modifie un produit existant en fusionnant les nouvelles données
 function modifierProduit($code_barre, $newData) {
     $produits = lireProduits();
     foreach ($produits as &$p) {
@@ -71,6 +57,8 @@ function modifierProduit($code_barre, $newData) {
     }
     return false;
 }
+
+// Supprime un produit du fichier JSON par son code-barres
 function supprimerProduit($code_barre) {
     $produits = lireProduits();
     $newList = array_filter($produits, function($p) use ($code_barre) {
@@ -80,6 +68,7 @@ function supprimerProduit($code_barre) {
     return ecrireProduits(array_values($newList));
 }
 
+// Diminue le stock d'un produit d'une quantité donnée
 function decrementerStock($code_barre, $quantite) {
     $produits = lireProduits();
     foreach ($produits as &$p) {
@@ -88,13 +77,14 @@ function decrementerStock($code_barre, $quantite) {
                 $p['quantite_stock'] -= $quantite;
                 return ecrireProduits($produits);
             } else {
-                return false; // stock insuffisant
+                return false;
             }
         }
     }
     return false;
 }
 
+// Modifie directement le stock d'un produit à une nouvelle valeur
 function modifierStockProduit($codeBarre, $nouveauStock) {
     $produits = lireProduits();
     foreach ($produits as &$p) {

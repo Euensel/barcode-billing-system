@@ -1,11 +1,11 @@
 <?php
-// auth/login.php
+
 require_once '../config/config.php';   // définit les constantes et démarre la session
 require_once '../includes/fonctions-auth.php';
 
 $error = '';
 
-initialiserFichierUtilisateurs(); // maintenant USERS_FILE est connu
+initialiserFichierUtilisateurs(); 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $identifiant = isset($_POST['identifiant']) ? trim($_POST['identifiant']) : '';

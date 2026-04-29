@@ -1,5 +1,5 @@
 <?php
-// modules/produits/liste.php
+
 require_once '../../config/config.php';
 require_once '../../includes/fonctions-auth.php';
 require_once '../../includes/fonctions-produits.php';

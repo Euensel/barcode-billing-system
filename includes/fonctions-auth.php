@@ -1,10 +1,9 @@
 <?php
-// includes/fonctions_utilisateurs.php
-require_once __DIR__ . '/../config/config.php';  // Correction du chemin
 
-/**
- * Lit le fichier JSON des utilisateurs et retourne un tableau associatif.
- */
+require_once __DIR__ . '/../config/config.php';
+
+// Lit le fichier JSON des utilisateurs et retourne un tableau associatif.
+
 function lireUtilisateurs() {
     if (!file_exists(USERS_FILE)) {
         return [];
@@ -20,9 +19,7 @@ function lireUtilisateurs() {
     return $data;
 }
 
-/**
- * Écrit le tableau des utilisateurs dans le fichier JSON.
- */
+//Écrit le tableau des utilisateurs dans le fichier JSON.
 function ecrireUtilisateurs($utilisateurs) {
     $dir = dirname(USERS_FILE);
     if (!is_dir($dir)) {
@@ -35,9 +32,7 @@ function ecrireUtilisateurs($utilisateurs) {
     return file_put_contents(USERS_FILE, $json) !== false;
 }
 
-/**
- * Trouve un utilisateur par son identifiant.
- */
+//Trouve un utilisateur par son identifiant.
 function trouverUtilisateurParIdentifiant($identifiant) {
     $utilisateurs = lireUtilisateurs();
     foreach ($utilisateurs as $utilisateur) {
@@ -48,10 +43,12 @@ function trouverUtilisateurParIdentifiant($identifiant) {
     return null;
 }
 
+//Vérifie si un identifiant existe déjà dans le fichier.
 function identifiantExiste($identifiant) {
     return trouverUtilisateurParIdentifiant($identifiant) !== null;
 }
 
+//Ajoute un nouvel utilisateur après validation des champs obligatoires.
 function ajouterUtilisateur($newUser) {
     $utilisateurs = lireUtilisateurs();
     $required = ['identifiant', 'mot_de_passe', 'role', 'nom_complet'];
@@ -73,6 +70,7 @@ function ajouterUtilisateur($newUser) {
     return ecrireUtilisateurs($utilisateurs);
 }
 
+//Désactive un utilisateur en passant son champ actif à false.
 function desactiverUtilisateur($identifiant) {
     $utilisateurs = lireUtilisateurs();
     $found = false;
@@ -89,9 +87,7 @@ function desactiverUtilisateur($identifiant) {
     return ecrireUtilisateurs($utilisateurs);
 }
 
-/**
- * Initialise le fichier utilisateurs avec un super-admin si nécessaire.
- */
+//Initialise le fichier utilisateurs avec un super-admin si le fichier est vide ou inexistant.
 function initialiserFichierUtilisateurs() {
     if (!file_exists(USERS_FILE)) {
         $default_password = password_hash('admin123', PASSWORD_DEFAULT);
@@ -121,19 +117,19 @@ function initialiserFichierUtilisateurs() {
     }
 }
 
-// Supprimer définitivement un utilisateur par identifiant
+//Supprime définitivement un utilisateur du fichier JSON.
 function supprimerUtilisateur($identifiant) {
     $utilisateurs = lireUtilisateurs();
     $nouvelle_liste = array_filter($utilisateurs, function($u) use ($identifiant) {
         return $u['identifiant'] !== $identifiant;
     });
     if (count($nouvelle_liste) === count($utilisateurs)) {
-        return false; // non trouvé
+        return false;
     }
     return ecrireUtilisateurs(array_values($nouvelle_liste));
 }
 
-// Modifier un utilisateur (champs: nom_complet, role, mot_de_passe optionnel)
+//Modifie les informations d'un utilisateur (nom, rôle, mot de passe optionnel).
 function modifierUtilisateur($identifiant, $nom_complet, $role, $new_password = null) {
     $utilisateurs = lireUtilisateurs();
     foreach ($utilisateurs as &$u) {
@@ -143,6 +139,18 @@ function modifierUtilisateur($identifiant, $nom_complet, $role, $new_password = 
             if ($new_password !== null && !empty($new_password)) {
                 $u['mot_de_passe'] = password_hash($new_password, PASSWORD_DEFAULT);
             }
+            return ecrireUtilisateurs($utilisateurs);
+        }
+    }
+    return false;
+}
+
+//Active ou désactive un utilisateur en inversant la valeur de son champ actif.
+function toggleActiverUtilisateur($identifiant) {
+    $utilisateurs = lireUtilisateurs();
+    foreach ($utilisateurs as &$user) {
+        if ($user['identifiant'] === $identifiant) {
+            $user['actif'] = !$user['actif'];
             return ecrireUtilisateurs($utilisateurs);
         }
     }

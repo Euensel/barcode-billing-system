@@ -1,4 +1,4 @@
-// assets/js/scanner.js
+
 document.addEventListener('DOMContentLoaded', function() {
     const scanBtn = document.getElementById('scan-btn');
     const videoElem = document.getElementById('scanner-video');

@@ -1,5 +1,5 @@
 <?php
-// modules/administration/modifier-compte.php
+
 require_once '../../config/config.php';
 require_once '../../includes/fonctions-auth.php';
 

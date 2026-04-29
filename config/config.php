@@ -1,5 +1,4 @@
 <?php
-// config/config.php
 
 // Session démarrée UNE SEULE fois
 if (session_status() === PHP_SESSION_NONE) {

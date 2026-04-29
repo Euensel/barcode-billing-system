@@ -1,5 +1,5 @@
 <?php
-// rapports/rapport-journalier.php
+
 require_once '../config/config.php';
 require_once '../includes/fonctions-auth.php';
 require_once '../includes/fonctions-factures.php';
